@@ -5,6 +5,8 @@ const {PAGE_LIMIT} = require('../constants/messageConstants');
 
 const messageController = {
     getOneMessage: (req, res) => {
+        const messageId = req.params.id;
+
         Message.getOneMessage(messageId)
             .then((message) => {
                 if (!message) {
