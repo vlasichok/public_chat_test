@@ -12,7 +12,7 @@ const messageRoutes = () => {
         .get(messageController.getMessages);
 
     //middleware that get the event for DB and pass it in req
-    messageRouter.route('/:id')
+    messageRouter.route('/single/:id')
         .get(messageController.getOneMessage)
         .put(messageController.updateMessage)
         .delete(messageController.deleteMessage);
